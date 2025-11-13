@@ -1,4 +1,5 @@
-import { Home, Inbox, Calendar, Search, Settings, User2, ChevronDown, ChevronUp, Plus, Projector } from "lucide-react"
+import { Home, Inbox, Calendar, Search, Settings, User2, ChevronDown, ChevronUp, Plus, Projector, UserRound as profile, UsersRound as users, BadgeDollarSign as payments } from "lucide-react"
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 import { Sidebar, SidebarContent, SidebarFooter, SidebarGroup, SidebarGroupAction, SidebarGroupContent, SidebarGroupLabel, SidebarHeader, SidebarMenu, SidebarMenuBadge, SidebarMenuButton, SidebarMenuItem, SidebarMenuSkeleton, SidebarMenuSub, SidebarMenuSubItem, SidebarSeparator } from "./ui/sidebar"
 import Link from "next/link"
 import Image from "next/image"
@@ -13,9 +14,24 @@ const items = [
         icon: Home
     },
     {
+        title: "Profile",
+        url: "/users/hazemelgindy",
+        icon: profile
+    },
+    {
         title: "Inbox",
         url: "/",
         icon: Inbox
+    },
+    {
+        title: "Payments",
+        url: "/payments",
+        icon: payments
+    },
+    {
+        title: "Users",
+        url: "/users",
+        icon: users
     },
     {
         title: "Calendar",

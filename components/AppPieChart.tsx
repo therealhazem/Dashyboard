@@ -2,6 +2,8 @@
 import { Label, Pie, PieChart } from 'recharts'
 import { ChartConfig, ChartContainer, ChartTooltip, ChartTooltipContent } from './ui/chart'
 import { TrendingUp } from 'lucide-react'
+import { Button } from './ui/button'
+import Link from 'next/link'
 
 const chartData = [
     { browser: "chrome", visitors: 275, fill: "var(--color-chrome)" },
@@ -41,7 +43,7 @@ const AppPieChart = () => {
 
     const TotalVisitors = chartData.reduce((acc, curr) => acc + curr.visitors, 0);
     return (
-        <div>
+        <div className=''>
             <h1 className="text-lg font-bold mb-6">Browser Usage    </h1>
             <ChartContainer config={chartConfig} className="mx-auto aspect-square max-h-[250px]">
                 <PieChart>
@@ -97,6 +99,11 @@ const AppPieChart = () => {
                     Showing total visitors for the last 6 months
                 </div>
             </div>
+            <Button className="w-full mt-5">
+                <Link href="/payments">
+                    Go To Payments
+                </Link>
+            </Button>
         </div>
     )
 }

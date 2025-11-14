@@ -19,10 +19,6 @@
 
 
 </div>
-
-<!-- Vercel deployment status badge (replace if your Vercel slug differs) -->
-[![Vercel Status](https://vercel.com/therealhazem/dashyboard/badge)](https://vercel.com/therealhazem/dashyboard)
-
 ---
 
 ## 📋 Table of Contents

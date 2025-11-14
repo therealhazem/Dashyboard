@@ -17,7 +17,6 @@
 
 **👉 [https://dashyboard.vercel.app/](https://dashyboard.vercel.app/) 👈**
 
-* Experience Dashyboard *
 
 </div>
 
@@ -27,7 +26,6 @@
 ---
 
 ## 📋 Table of Contents
-
 - [Introduction](#-introduction)
 - [Tech Stack](#-tech-stack)
 - [Features](#-features)
@@ -80,10 +78,6 @@ Dashyboard is a lightweight admin/analytics dashboard template that demonstrates
 - Theme toggling (light / dark / system) with no-flash mode
 - Loading states, skeletons and small animations
 
-### 🔧 Technical Features
-- App Router and server components where appropriate
-- Cookie-backed sidebar state (server -> client sync)
-- Minimal, composable component patterns for fast prototyping
 
 ---
 
@@ -175,7 +169,7 @@ Add screenshots to `/public/assets` and the images will render below. Replace th
 ### Users / Profiles
 ![Users](/public/assets/Profilee.png)
 
-### Charts / Widgets
+### Payments
 ![Charts](/public/assets/Paymentss.png)
 
 </div>

@@ -1,6 +1,6 @@
 <div align="center">
 
-![Dashyboard](/public/assets/dashy.png)
+![Dashyboard](/public/assets/Dashy.png)
 
 # 🚀 Dashyboard
 
@@ -20,6 +20,9 @@
 * Experience Dashyboard *
 
 </div>
+
+<!-- Vercel deployment status badge (replace if your Vercel slug differs) -->
+[![Vercel Status](https://vercel.com/therealhazem/dashyboard/badge)](https://vercel.com/therealhazem/dashyboard)
 
 ---
 
@@ -44,21 +47,20 @@ Dashyboard is a lightweight admin/analytics dashboard template that demonstrates
 
 ## ⚙️ Tech Stack
 
-
 ### Frontend
-- **React 19** — UI library
-- **Next.js (App Router)** — routing & server components
-- **TypeScript** — type safety
+- **React 19.2.0** — UI library (see `package.json`)
+- **Next.js 16.0.1** (App Router) — routing & server components
+- **TypeScript ^5** — type safety
 - **Tailwind CSS v4** — utility-first styling
 - **Radix UI** — accessible primitives
 
 ### Data & UI
-- **Recharts** — charts
-- **@tanstack/react-table** — tables & pagination
-- **react-hook-form** + **zod** — forms & validation
+- **Recharts ^2.15.4** — charts
+- **@tanstack/react-table ^8.21.3** — tables & pagination
+- **react-hook-form ^7.66.0** + **zod ^4.1.12** — forms & validation
 
 ### Dev & Tooling
-- **ESLint** — linting
+- **ESLint ^9** — linting
 - **PostCSS / Tailwind** — CSS pipeline
 - **Vercel** — recommended deployment
 
@@ -109,6 +111,8 @@ If you have a `.env.example`, create a local copy:
 ```bash
 cp .env.example .env.local
 ```
+
+If the repo doesn't include a `.env.example`, create a `.env.local` file manually and add any environment variables your setup requires (see the Environment Variables section above).
 
 Open `http://localhost:3000` in your browser.
 

@@ -1,37 +1,196 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+<div align="center">
 
-## Getting Started
+![Dashyboard](/public/assets/dashy.png)
 
-First, run the development server:
+# 🚀 Dashyboard
+
+**Admin & analytics dashboard — fast to customize and deploy**
+
+![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=nextdotjs&logoColor=white)
+![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+![Recharts](https://img.shields.io/badge/Recharts-FF6384?style=for-the-badge&logo=chartjs&logoColor=white)
+
+## 🌐 LIVE PREVIEW
+
+[![🚀 View Live Demo](https://img.shields.io/badge/🚀_View_Live_Demo-FF6B6B?style=for-the-badge&logo=vercel&logoColor=white)](https://dashyboard.vercel.app/)
+
+**👉 [https://dashyboard.vercel.app/](https://dashyboard.vercel.app/) 👈**
+
+* Experience Dashyboard *
+
+</div>
+
+---
+
+## 📋 Table of Contents
+
+- [Introduction](#-introduction)
+- [Tech Stack](#-tech-stack)
+- [Features](#-features)
+- [Quick Start](#-quick-start)
+- [Project Structure](#️-project-structure)
+- [Environment Variables](#-environment-variables)
+- [Deployment](#-deployment)
+- [Screenshots](#-screenshots)
+- [Contributing](#-contributing)
+
+---
+
+## 🤖 Introduction
+
+Dashyboard is a lightweight admin/analytics dashboard template that demonstrates a practical component-driven architecture using Next.js App Router, Radix UI primitives and Tailwind CSS. The repo includes a responsive sidebar, top navigation, charts, tables, and editable user pages to help you scaffold internal tools and admin panels quickly.
+
+
+## ⚙️ Tech Stack
+
+
+### Frontend
+- **React 19** — UI library
+- **Next.js (App Router)** — routing & server components
+- **TypeScript** — type safety
+- **Tailwind CSS v4** — utility-first styling
+- **Radix UI** — accessible primitives
+
+### Data & UI
+- **Recharts** — charts
+- **@tanstack/react-table** — tables & pagination
+- **react-hook-form** + **zod** — forms & validation
+
+### Dev & Tooling
+- **ESLint** — linting
+- **PostCSS / Tailwind** — CSS pipeline
+- **Vercel** — recommended deployment
+
+---
+
+## 🔋 Features
+
+
+### 🎯 Core Functionality
+- Reusable dashboard layout with sidebar & top nav
+- Chart components (area, line, pie) and small widgets
+- Data table with sorting, filtering and pagination
+- User pages with editable forms
+
+### 🎨 User Experience
+- Responsive, mobile-first UI using Tailwind CSS
+- Theme toggling (light / dark / system) with no-flash mode
+- Loading states, skeletons and small animations
+
+### 🔧 Technical Features
+- App Router and server components where appropriate
+- Cookie-backed sidebar state (server -> client sync)
+- Minimal, composable component patterns for fast prototyping
+
+---
+
+## 🤸 Quick Start
+
+### Prerequisites
+
+
+### Install & Run
 
 ```bash
+git clone https://github.com/therealhazem/Dashyboard.git
+cd Dashyboard
+npm install
+# or
+pnpm install
+# or
+yarn install
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+If you have a `.env.example`, create a local copy:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+cp .env.example .env.local
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Open `http://localhost:3000` in your browser.
 
-## Learn More
+---
 
-To learn more about Next.js, take a look at the following resources:
+## 🕸️ Project Structure
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+dashboard/
+├── app/                     # Next.js App Router (layouts & pages)
+│   ├── layout.tsx           # Root layout (Theme + Sidebar providers)
+│   ├── page.tsx             # Home / Dashboard page
+│   └── users/               # Example user routes
+├── components/              # Reusable components (Navbar, Sidebar, Charts)
+├── components/ui/           # Small UI primitives (input, button, table)
+├── lib/                     # Utilities & helpers
+├── hooks/                   # Custom hooks
+├── public/                  # Static assets
+├── styles/                  # Global styles (Tailwind config + globals.css)
+└── package.json             # Scripts & dependencies
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+---
 
-## Deploy on Vercel
+## 🔗 Environment Variables
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+This repo doesn't require any external API keys to run the UI locally. If you add integrations, create a `.env.local` and reference them via Next.js env conventions. Example variables you may add later:
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
-# Dashyboard
+```env
+# Example placeholders
+NEXT_PUBLIC_API_URL=
+SANITY_PROJECT_ID=
+AUTH_GITHUB_ID=
+AUTH_GITHUB_SECRET=
+```
+
+---
+
+## 🚀 Deployment
+
+- Recommended: Deploy to Vercel (automatic support for Next.js)
+- Or build and serve on any Node host:
+
+```bash
+npm run build
+npm run start
+```
+
+---
+
+## 📱 Screenshots
+
+Add screenshots to `/public/assets` and the images will render below. Replace these files with your own screenshots when ready.
+
+<div align="center">
+
+### Homepage
+![Homepage](/public/assets/Homee.png)
+
+### Users / Profiles
+![Users](/public/assets/Profilee.png)
+
+### Charts / Widgets
+![Charts](/public/assets/Paymentss.png)
+
+</div>
+
+---
+
+## 🤝 Contributing
+
+- Fork the repo and make a branch per feature / fix
+- Keep commits small and focused
+- Follow existing component patterns
+- Open a PR and describe the change
+
+---
+
+<div align="center">
+
+**Made with ❤️ by Hazem Elgindy**
+
+Check my portfolio: https://hazemelgindy.me
+
+</div>
